@@ -1,0 +1,98 @@
+.modal {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.modal .hidden-div {
+  width: 50%;
+  height: 100%;
+  background: white;
+  transform: translateX(-100%);
+  transition: all 0.4s ease-out;
+}
+.modal .hidden-div-active {
+  transform: translateX(0%);
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.wrapper #home {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper #home .home-header {
+  width: 100%;
+  height: 8%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid silver;
+}
+.wrapper #home .home-header .first-home-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper #home .home-header .first-home-header .burger {
+  margin-left: 7%;
+  margin-right: 10px;
+}
+.wrapper #home .home-header .first-home-header .burger div {
+  width: 17px;
+  height: 2px;
+  background: black;
+  margin: 2px;
+}
+.wrapper #home .home-header .first-home-header img {
+  width: 70px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrapper #home .home-header .second-home-header {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  body {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */

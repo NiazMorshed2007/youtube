@@ -1,0 +1,18 @@
+@import "mixin";
+@import "media";
+@import "modal";
+@import "home";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
