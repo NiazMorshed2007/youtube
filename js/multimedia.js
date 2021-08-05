@@ -1,15 +1,23 @@
 var multimedia = document.querySelector(".multimedia");
 var posters = document.querySelectorAll(".inner-home-videos > div");
+var suggestions = document.querySelectorAll(".inner-suggestions > div");
 var video = document.querySelector("video");
 let counter = 1;
 
-posters.forEach((e, i) => {
-  managingVideos(e, i);
+console.log(posters);
+
+posters.forEach((e) => {
+  managingVideos(e);
 });
 
-function managingVideos(e, i) {
-  e.addEventListener("click", (event) => {
-    counter = event.target.alt || event.target.id;
+suggestions.forEach((e) => {
+  managingVideos(e);
+});
+
+function managingVideos(e) {
+  e.addEventListener("click", () => {
+    counter = e.classList[1];
+    console.log(e.classList[1]);
     playVideo();
   });
   e.addEventListener("click", showMultimedia);
