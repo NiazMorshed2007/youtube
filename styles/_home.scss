@@ -62,10 +62,13 @@
           width: 100%;
           height: 200px;
           background: white;
-          img {
-            width: 100%;
+          .poster-image {
             height: 80%;
-            object-fit: cover;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
           }
         }
       }
