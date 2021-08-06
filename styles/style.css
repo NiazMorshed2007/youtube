@@ -92,40 +92,52 @@
 }
 .wrapper #home .home-videos .inner-home-videos .poster {
   width: 90%;
-  height: 225 px;
   background: white;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  margin-top: 10px;
 }
 .wrapper #home .home-videos .inner-home-videos .poster .poster-image {
-  width: 100%;
-  height: 70%;
   position: relative;
 }
 .wrapper #home .home-videos .inner-home-videos .poster .poster-image img {
   width: 100%;
   height: 100%;
-}
-.wrapper #home .home-videos .inner-home-videos .poster .poster-txt {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  flex-direction: row;
-}
-.wrapper #home .home-videos .inner-home-videos .poster .poster-txt .poster-txt-img {
-  width: 17%;
-  height: 100%;
-}
-.wrapper #home .home-videos .inner-home-videos .poster .poster-txt .poster-txt-img img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+.wrapper #home .home-videos .inner-home-videos .poster .poster-txt {
+  display: flex;
+  flex-direction: row;
+  gap: 0.02em;
+  align-items: center;
+  padding-top: 2%;
+}
+.wrapper #home .home-videos .inner-home-videos .poster .poster-txt .poster-txt-img {
+  width: 17%;
+}
+.wrapper #home .home-videos .inner-home-videos .poster .poster-txt .poster-txt-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid silver;
+}
 .wrapper #home .home-videos .inner-home-videos .poster .poster-txt .poster-txt-txt h4 {
   font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  line-height: 16px;
+}
+.wrapper #home .home-videos .inner-home-videos .poster .poster-txt .poster-txt-txt p {
+  font-weight: 300;
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  padding-top: 2px;
 }
 
 .multimedia {
