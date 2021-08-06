@@ -91,18 +91,41 @@
   overflow-y: scroll;
 }
 .wrapper #home .home-videos .inner-home-videos .poster {
-  width: 100%;
-  height: 200px;
+  width: 90%;
+  height: 225 px;
   background: white;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .wrapper #home .home-videos .inner-home-videos .poster .poster-image {
-  height: 80%;
+  width: 100%;
+  height: 70%;
+  position: relative;
 }
 .wrapper #home .home-videos .inner-home-videos .poster .poster-image img {
   width: 100%;
   height: 100%;
+}
+.wrapper #home .home-videos .inner-home-videos .poster .poster-txt {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+}
+.wrapper #home .home-videos .inner-home-videos .poster .poster-txt .poster-txt-img {
+  width: 17%;
+  height: 100%;
+}
+.wrapper #home .home-videos .inner-home-videos .poster .poster-txt .poster-txt-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.wrapper #home .home-videos .inner-home-videos .poster .poster-txt .poster-txt-txt h4 {
+  font-family: "Tajawal", sans-serif;
 }
 
 .multimedia {

@@ -10,6 +10,12 @@ posters.forEach((e) => {
   managingVideos(e);
 });
 
+// video.src = "video4.mp4";
+
+// console.log();
+
+// console.log(posters[0]);
+
 suggestions.forEach((e) => {
   managingVideos(e);
 });
