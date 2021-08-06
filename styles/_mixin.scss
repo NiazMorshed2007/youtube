@@ -51,3 +51,91 @@
     }
   }
 }
+
+@mixin box {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  &::after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0) translateY(-200px);
+  }
+  .wave-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .wave {
+      opacity: 0.7;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      background: orange;
+      box-shadow: 0px -5px 2px orange;
+      width: 240px;
+      height: 260px;
+      margin-left: -120px;
+      margin-top: -45px;
+      transform-origin: 50% 48%;
+      border-radius: 43%;
+      animation: drift 3000ms infinite linear;
+      filter: blur(1.5px);
+    }
+    .wave.-three {
+      animation: drift 5000ms infinite linear;
+    }
+
+    .wave.-two {
+      animation: drift 7000ms infinite linear;
+      opacity: 0.1;
+      background: yellow;
+    }
+    .title {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      z-index: 1;
+      transform: translate3d(0, 0, 0) translateY(-50%);
+      @include flex(row);
+      align-items: center;
+      justify-content: center;
+      .video-loader {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border-left: 2px solid black;
+        transform: translateY(70px);
+        animation: videoloader 2s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes videoloader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

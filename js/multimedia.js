@@ -32,8 +32,17 @@ function managingVideos(e) {
 function playVideo() {
   video.src = "video" + counter + ".mp4";
   video.play();
+  hideOverflow();
 }
 
 function showMultimedia() {
   multimedia.classList.add("multimedia-active");
+}
+
+function hideOverflow() {
+  if (!multimedia.classList.contains("multimedia-active")) {
+    document.querySelector(".inner-home-videos").style.overflowY = "hidden";
+  } else {
+    document.querySelector(".inner-home-videos").style.overflowY = "scroll";
+  }
 }
