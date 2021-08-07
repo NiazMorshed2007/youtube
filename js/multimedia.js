@@ -36,5 +36,6 @@ function showMultimedia() {
 
 function backtoHome() {
   multimedia.classList.remove("multimedia-active");
+  video.pause();
   document.querySelector(".inner-home-videos").style.overflowY = "scroll";
 }

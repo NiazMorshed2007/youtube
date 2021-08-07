@@ -8,6 +8,7 @@ playPauseBtn.addEventListener("click", togglePlay);
 video.addEventListener("play", updateIcon);
 video.addEventListener("pause", updateIcon);
 video.addEventListener("timeupdate", handleProgress);
+video.addEventListener("timeupdate", updateTime);
 forward.addEventListener("click", forwardFunc);
 rewind.addEventListener("click", rewindFunc);
 progress.addEventListener("click", scrub);
@@ -41,4 +42,23 @@ function scrub(e) {
   const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
   video.currentTime = scrubTime;
   console.log(e);
+}
+
+function updateTime() {
+  const currentTime = document.getElementById("current-time");
+  const totalTime = document.getElementById("total-time");
+
+  var currentVideoT = video.currentTime;
+  var totalVideoT = video.duration;
+
+  var currentSecs = Math.floor(currentVideoT % 60);
+  var currentMins = Math.floor((currentVideoT % 3600) / 60);
+
+  var totalSecs = Math.floor(totalVideoT % 60);
+  var totalMins = Math.floor((totalVideoT % 3600) / 60);
+
+  currentTime.children[0].textContent = currentMins;
+  currentTime.children[1].textContent = currentSecs;
+  totalTime.children[0].textContent = totalMins;
+  totalTime.children[1].textContent = totalSecs;
 }
