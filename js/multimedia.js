@@ -2,19 +2,14 @@ var multimedia = document.querySelector(".multimedia");
 var posters = document.querySelectorAll(".inner-home-videos > div");
 var suggestions = document.querySelectorAll(".inner-suggestions > div");
 var video = document.querySelector("video");
+var back = document.querySelector(".back");
 let counter = 1;
 
-console.log(posters);
+back.addEventListener("click", backtoHome);
 
 posters.forEach((e) => {
   managingVideos(e);
 });
-
-// video.src = "video4.mp4";
-
-// console.log();
-
-// console.log(posters[0]);
 
 suggestions.forEach((e) => {
   managingVideos(e);
@@ -32,17 +27,14 @@ function managingVideos(e) {
 function playVideo() {
   video.src = "video" + counter + ".mp4";
   video.play();
-  hideOverflow();
 }
 
 function showMultimedia() {
   multimedia.classList.add("multimedia-active");
+  document.querySelector(".inner-home-videos").style.overflowY = "hidden";
 }
 
-function hideOverflow() {
-  if (!multimedia.classList.contains("multimedia-active")) {
-    document.querySelector(".inner-home-videos").style.overflowY = "hidden";
-  } else {
-    document.querySelector(".inner-home-videos").style.overflowY = "scroll";
-  }
+function backtoHome() {
+  multimedia.classList.remove("multimedia-active");
+  document.querySelector(".inner-home-videos").style.overflowY = "scroll";
 }

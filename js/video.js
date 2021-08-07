@@ -11,7 +11,7 @@ video.addEventListener("timeupdate", handleProgress);
 forward.addEventListener("click", forwardFunc);
 rewind.addEventListener("click", rewindFunc);
 progress.addEventListener("click", scrub);
-progress.addEventListener("mousemove", scrub);
+// progress.addEventListener("mousemove", scrub);
 
 function togglePlay() {
   console.log("working");

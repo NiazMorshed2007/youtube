@@ -7,10 +7,18 @@
   z-index: 2;
   background: white;
   transform: translateY(100%);
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-in-out;
   opacity: 0;
   @include flex(column);
   overflow: hidden;
+  .back {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    font-size: 17px;
+    color: rgb(131, 127, 127);
+    z-index: 10;
+  }
   .player {
     height: 40%;
     width: 100%;
