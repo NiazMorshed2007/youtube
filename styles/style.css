@@ -192,7 +192,6 @@
   height: 40%;
   width: 100%;
   position: relative;
-  border-bottom: 1px solid silver;
   border-radius: 10px;
 }
 .multimedia .player .box {
@@ -279,10 +278,71 @@
 }
 .multimedia .control {
   width: 100%;
-  height: 10%;
+  height: 15%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.multimedia .control .control-first {
+  width: 90%;
+  height: 60%;
+}
+.multimedia .control .control-first .progress-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px 10px 20px 10px;
+}
+.multimedia .control .control-first .progress-wrapper .progress {
+  width: 100%;
+  height: 3px;
+  background: #dddcdc;
+  border-radius: 4px;
+}
+.multimedia .control .control-first .progress-wrapper .progress .juice {
+  width: 0%;
+  height: 100%;
+  background: orange;
+  position: relative;
+}
+.multimedia .control .control-first .progress-wrapper .progress .juice::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  display: block;
+  background: orange;
+  border-radius: 50%;
+  right: 0;
+  top: -100%;
+}
+.multimedia .control .control-second {
+  width: 90%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.multimedia .control .control-second i {
+  font-size: 25px;
+  color: orange;
+}
+.multimedia .control .control-second .play-pause {
+  transform: scale(1.5);
+}
+.multimedia .control .control-second .forward .rewind {
+  color: rgba(223, 159, 41, 0.884);
 }
 .multimedia .suggestions {
-  height: 50%;
+  height: 45%;
   width: 100%;
   padding-top: 10px;
   overflow: hidden;
