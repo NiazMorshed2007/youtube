@@ -189,8 +189,8 @@
 }
 .multimedia .back {
   position: fixed;
-  top: 2%;
-  left: 2%;
+  top: 0.5%;
+  left: 0.5%;
   font-size: 17px;
   color: #837f7f;
   z-index: 10;
@@ -303,8 +303,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  padding: 10px 10px 20px 10px;
 }
 .multimedia .control .control-first .progress-wrapper .time {
   width: 100%;
@@ -324,6 +322,7 @@
   background: #dddcdc;
   border-radius: 4px;
   margin-bottom: 7px;
+  position: relative;
 }
 .multimedia .control .control-first .progress-wrapper .progress .juice {
   width: 0%;
@@ -366,7 +365,8 @@
   width: 100%;
   padding-top: 10px;
   overflow: hidden;
-  border-top: 1px solid #dbdbdb;
+  border-top: 1px solid #dddddd;
+  border-radius: 10px;
 }
 .multimedia .suggestions .inner-suggestions {
   width: 100%;
@@ -432,6 +432,149 @@
   opacity: 1;
 }
 
+.wrapper .loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .loader .loader-header {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid silver;
+}
+.wrapper .loader .loader-header .loader-first-header {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper .loader .loader-header .loader-first-header .loader-shape1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 7%;
+  margin-right: 10px;
+}
+.wrapper .loader .loader-header .loader-first-header .loader-shape2 {
+  width: 70px;
+  height: 60%;
+}
+.wrapper .loader .loader-header .loader-second-header {
+  margin-left: auto;
+  margin-right: 30px;
+}
+.wrapper .loader .loader-header .loader-second-header .loader-shape3 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.wrapper .loader .home-loader {
+  width: 100%;
+  height: 92%;
+}
+.wrapper .loader .home-loader .home-inner-loader {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 30px;
+}
+.wrapper .loader .home-loader .home-inner-loader .loader-poster {
+  width: 90%;
+  background: white;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+.wrapper .loader .home-loader .home-inner-loader .loader-poster .loader-poster-image {
+  position: relative;
+  background: whitesmoke;
+  height: 222px;
+}
+.wrapper .loader .home-loader .home-inner-loader .loader-poster .loader-poster-txt {
+  display: flex;
+  flex-direction: row;
+  gap: 0.02em;
+  align-items: center;
+  padding-top: 2%;
+}
+.wrapper .loader .home-loader .home-inner-loader .loader-poster .loader-poster-txt .loader-poster-txt-img {
+  width: 17%;
+}
+.wrapper .loader .home-loader .home-inner-loader .loader-poster .loader-poster-txt .loader-poster-txt-img .loader-poster-channel {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.wrapper .loader .home-loader .home-inner-loader .loader-poster .loader-poster-txt .loader-poster-txt-txt {
+  width: 83%;
+}
+.wrapper .loader .home-loader .home-inner-loader .loader-poster .loader-poster-txt .loader-poster-txt-txt .loader-h4 {
+  width: 90%;
+  height: 25px;
+}
+.wrapper .loader .home-loader .home-inner-loader .loader-poster .loader-poster-txt .loader-poster-txt-txt .loader-p {
+  font-weight: 300;
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  padding-top: 2px;
+}
+.wrapper .loader .home-loader .home-inner-loader .loader-poster .loader-poster-txt .loader-poster-txt-txt .loader-p > :nth-last-child(odd) {
+  width: 25%;
+  height: 20px;
+}
+.wrapper .loaded {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.load {
+  background: whitesmoke;
+  position: relative;
+  overflow: hidden;
+}
+.load::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #f1f1f1;
+  transform: translateX(-100%);
+  -webkit-animation: loading 0.9s ease-in-out infinite;
+          animation: loading 0.9s ease-in-out infinite;
+}
+
+@-webkit-keyframes loading {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes loading {
+  to {
+    transform: translateX(100%);
+  }
+}
 * {
   margin: 0;
   padding: 0;

@@ -1,0 +1,120 @@
+.wrapper {
+  .loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 10;
+    @include flex(column);
+    .loader-header {
+      width: 100%;
+      height: 8%;
+      @include flex(row);
+      align-items: center;
+      border-bottom: 1px solid silver;
+      .loader-first-header {
+        width: 50%;
+        height: 100%;
+        @include flex(row);
+        align-items: center;
+        .loader-shape1 {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-left: 7%;
+          margin-right: 10px;
+        }
+        .loader-shape2 {
+          width: 70px;
+          height: 60%;
+        }
+      }
+      .loader-second-header {
+        margin-left: auto;
+        margin-right: 30px;
+        .loader-shape3 {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+        }
+      }
+    }
+    .home-loader {
+      width: 100%;
+      height: 92%;
+      .home-inner-loader {
+        @include flex(column);
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-bottom: 30px;
+        .loader-poster {
+          width: 90%;
+          background: white;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          margin-top: 10px;
+          .loader-poster-image {
+            position: relative;
+            background: $beforeLoad;
+            height: 222px;
+          }
+          .loader-poster-txt {
+            @include flex(row);
+            gap: 0.02em;
+            align-items: center;
+            padding-top: 2%;
+            .loader-poster-txt-img {
+              width: 17%;
+              .loader-poster-channel {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+              }
+            }
+            .loader-poster-txt-txt {
+              width: 83%;
+              .loader-h4 {
+                width: 90%;
+                height: 25px;
+              }
+              .loader-p {
+                font-weight: 300;
+                font-size: 13px;
+                @include flex(row);
+                align-items: center;
+                gap: 0.5em;
+                padding-top: 2px;
+                & > :nth-last-child(odd) {
+                  width: 25%;
+                  height: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .loaded {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+//it is global :)
+.load {
+  @include forLoader;
+}
+
+@keyframes loading {
+  to {
+    transform: translateX(100%);
+  }
+}
