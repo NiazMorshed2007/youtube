@@ -18,6 +18,8 @@ body {
   height: 100vh;
   display: none;
   font-family: "Source Sans Pro", sans-serif;
+  background: black;
+  color: white;
   @include mobile {
     display: block;
   }

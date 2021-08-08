@@ -6,7 +6,7 @@
     display: block;
     top: 0;
     left: 0;
-    background: white;
+    background: black;
     z-index: 10;
     @include flex(column);
     .loader-header {
@@ -54,7 +54,7 @@
         padding-bottom: 30px;
         .loader-poster {
           width: 90%;
-          background: white;
+          background: black;
           position: relative;
           left: 50%;
           transform: translateX(-50%);

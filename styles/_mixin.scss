@@ -5,7 +5,7 @@
 
 @mixin format {
   width: 90%;
-  background: white;
+  background: black;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -153,7 +153,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: rgb(241, 241, 241);
+    background: rgb(104, 104, 104);
     transform: translateX(-100%);
     animation: loading 0.9s ease-in-out infinite;
   }

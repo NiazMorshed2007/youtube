@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin horizontal {
+  @media (min-aspect-ratio: 16/9) {
+    @content;
+  }
+}
