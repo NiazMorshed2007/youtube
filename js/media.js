@@ -1,4 +1,4 @@
-var control = document.querySelector(".control");
+var progress = document.querySelector(".progress-wrapper");
 
 video.addEventListener("click", videoControlOnClick);
 
@@ -16,10 +16,10 @@ x.addListener(myFunction);
 
 var timeOut;
 
-// function videoControlOnClick() {
-//   control.classList.add("control-active");
+function videoControlOnClick() {
+  progress.classList.add("progress-active");
 
-//   timeOut = setTimeout(() => {
-//     control.classList.remove("control-active");
-//   }, 1300);
-// }
+  timeOut = setTimeout(() => {
+    progress.classList.remove("progress-active");
+  }, 1300);
+}

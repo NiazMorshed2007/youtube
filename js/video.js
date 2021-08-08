@@ -11,11 +11,11 @@ video.addEventListener("pause", videoOverlay);
 video.addEventListener("click", videoOverlayOnClick);
 video.addEventListener("play", updateIcon);
 video.addEventListener("pause", updateIcon);
-// video.addEventListener("timeupdate", handleProgress);
+video.addEventListener("timeupdate", handleProgress);
 // video.addEventListener("timeupdate", updateTime);
 forwardDiv.addEventListener("dblclick", rewindFunc);
 rewindDiv.addEventListener("dblclick", forwardFunc);
-// progress.addEventListener("click", scrub);
+progress.addEventListener("click", scrub);
 // progress.addEventListener("mousemove", scrub);
 
 function togglePlay() {
@@ -60,16 +60,16 @@ function rewindFunc() {
   video.currentTime -= 5;
 }
 
-// function handleProgress() {
-//   const percent = (video.currentTime / video.duration) * 100;
-//   juice.style.width = percent + "%";
-// }
+function handleProgress() {
+  const percent = (video.currentTime / video.duration) * 100;
+  juice.style.width = percent + "%";
+}
 
-// function scrub(e) {
-//   const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
-//   video.currentTime = scrubTime;
-//   console.log(e);
-// }
+function scrub(e) {
+  const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+  video.currentTime = scrubTime;
+  console.log(e);
+}
 
 // function updateTime() {
 //   const currentTime = document.getElementById("current-time");
