@@ -24,11 +24,6 @@ function managingVideos(e) {
   e.addEventListener("click", showMultimedia);
 }
 
-function playVideo() {
-  video.src = "video" + counter + ".mp4";
-  video.play();
-}
-
 function showMultimedia() {
   multimedia.classList.add("multimedia-active");
   document.querySelector(".inner-home-videos").style.overflowY = "hidden";

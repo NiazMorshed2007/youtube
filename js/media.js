@@ -16,10 +16,10 @@ x.addListener(myFunction);
 
 var timeOut;
 
-function videoControlOnClick() {
-  control.classList.add("control-active");
+// function videoControlOnClick() {
+//   control.classList.add("control-active");
 
-  timeOut = setTimeout(() => {
-    control.classList.remove("control-active");
-  }, 1300);
-}
+//   timeOut = setTimeout(() => {
+//     control.classList.remove("control-active");
+//   }, 1300);
+// }

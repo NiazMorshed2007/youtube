@@ -53,8 +53,8 @@
           border-radius: 10px;
           background: rgba(0, 0, 0, 0.3);
           z-index: 2;
-          // opacity: 0;
-          // visibility: hidden;
+          opacity: 0;
+          visibility: hidden;
           transition: all 0.4s ease-in-out;
           @include flex(row);
           color: white;
@@ -64,6 +64,21 @@
             height: 100%;
             // background: blue;
             @include flex(row);
+            .play-pause {
+              position: absolute;
+              display: block;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              .play-pause-icon {
+                position: absolute;
+                display: block;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(1.8);
+              }
+              z-index: 4;
+            }
             .left-video-overlay {
               width: 50%;
               height: 100%;
@@ -83,6 +98,11 @@
             min-height: 100%;
             border-radius: 0px;
           }
+        }
+
+        .video-overlay-active {
+          opacity: 1;
+          visibility: visible;
         }
         video {
           width: 100%;
