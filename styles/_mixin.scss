@@ -158,3 +158,12 @@
     animation: loading 0.9s ease-in-out infinite;
   }
 }
+
+@mixin inputThumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: red;
+  border: none;
+}
