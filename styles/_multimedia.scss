@@ -121,17 +121,14 @@
           transition: all 0.3s ease-in-out;
           @include horizontal {
             position: fixed;
-            bottom: 5%;
-            // opacity: 0;
+            bottom: 10%;
+            opacity: 0;
           }
           .times {
             width: 100%;
             @include flex(row);
             align-items: center;
             justify-content: space-between;
-            // div {
-            //   // @include flex(row);
-            // }
             #total-time {
               text-align: right;
             }
@@ -160,12 +157,11 @@
             background: red;
           }
         }
-      }
-
-      @include horizontal {
-        .progress-wrapper-active {
-          // transform: translateY(0px);
-          opacity: 1;
+        @include horizontal {
+          .progress-wrapper-active {
+            // transform: translateY(0px);
+            opacity: 1;
+          }
         }
       }
 

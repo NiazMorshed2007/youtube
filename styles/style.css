@@ -354,7 +354,8 @@
 @media (min-aspect-ratio: 16/9) {
   .multimedia .player .video-wrapper div .progress-wrapper {
     position: fixed;
-    bottom: 5%;
+    bottom: 10%;
+    opacity: 0;
   }
 }
 .multimedia .player .video-wrapper div .progress-wrapper .times {
@@ -406,7 +407,7 @@
   background: red;
 }
 @media (min-aspect-ratio: 16/9) {
-  .multimedia .player .video-wrapper .progress-wrapper-active {
+  .multimedia .player .video-wrapper div .progress-wrapper-active {
     opacity: 1;
   }
 }
