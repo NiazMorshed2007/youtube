@@ -147,7 +147,7 @@
           .progress::-webkit-slider-thumb {
             @include inputThumb;
           }
-          .progress::-webkit-progress-value {
+          .progress::-webkit-slider-runnable-progress {
             @include inputThumb;
           }
           .progress::-moz-range-thumb {

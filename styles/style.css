@@ -387,7 +387,7 @@
   background: red;
   border: none;
 }
-.multimedia .player .video-wrapper div .progress-wrapper .progress::-webkit-progress-value {
+.multimedia .player .video-wrapper div .progress-wrapper .progress::-webkit-slider-runnable-progress {
   -webkit-appearance: none;
   width: 10px;
   height: 10px;
