@@ -56,9 +56,9 @@ function media() {
     video.addEventListener("play", progressWrapperOnVideo);
     video.addEventListener("pause", progressWrapperOnVideo);
     video.addEventListener("click", progressWrapperAppear);
-    console.log("matched");
+    // console.log("matched");
   } else {
-    console.log("not-matched");
+    // console.log("not-matched");
   }
 }
 

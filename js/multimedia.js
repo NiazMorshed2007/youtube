@@ -7,14 +7,27 @@ let counter = 1;
 
 back.addEventListener("click", backtoHome);
 
-posters.forEach((e) => {
+posters.forEach((e, i) => {
   managingVideos(e);
+  removePlayingVideo(e, i, posters);
 });
 
-suggestions.forEach((e) => {
+suggestions.forEach((e, i) => {
   managingVideos(e);
+  removePlayingVideo(e, i, suggestions);
 });
 
+function removePlayingVideo(e, i, arr) {
+  e.addEventListener("click", () => {
+    for (let j = 0; j < arr.length; j++) {
+      if (j == i) {
+        suggestions[i].style.display = "none";
+      } else {
+        suggestions[j].style.display = "block";
+      }
+    }
+  });
+}
 function managingVideos(e) {
   e.addEventListener("click", () => {
     counter = e.classList[1];
