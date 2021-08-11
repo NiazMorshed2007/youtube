@@ -1,38 +1,5 @@
 var progressWrapper = document.querySelector(".progress-wrapper");
 
-// function myFunction() {
-//   if (x.matches) {
-//     video.addEventListener("play", progressWrapperOnVideo);
-//     video.addEventListener("pause", progressWrapperOnVideo);
-//     video.addEventListener("click", progressWrapperAppear);
-//     // If media query matches
-//   } else {
-//     document.body.style.display = "block";
-//   }
-// }
-
-// var x = window.matchMedia("(min-aspect-ratio: 16/9)");
-// myFunction(x);
-// x.addListener(myFunction);
-
-// // var timeOut;
-
-// // function progressWrapperActiveAuto() {
-// //   this.paused
-// //     ? progressWrapper.classList.add("progress-wrapper-active")
-// //     : progressWrapper.classList.remove("progress-wrapper-active");
-// //   this.paused ? clearTimeout(timeOut) : console.log("playing");
-// // }
-
-// // function progressWrapperActiveOnClick() {
-// //   // const videoOverlay = document.querySelector(".video-overlay");
-// //   progressWrapper.classList.add("progress-wrapper-active");
-// //   console.log("overlay");
-
-// //   timeOut = setTimeout(() => {
-// //     progressWrapper.classList.remove("progress-wrapper-active");
-// //   }, 1300);
-// // }
 const mediaQuery = window.matchMedia("(min-aspect-ratio: 16/9)");
 // Check if the media query is true
 function media() {
@@ -56,8 +23,44 @@ function media() {
     video.addEventListener("play", progressWrapperOnVideo);
     video.addEventListener("pause", progressWrapperOnVideo);
     video.addEventListener("click", progressWrapperAppear);
+
+    // video.addEventListener("click", openFullscreen);
+
+    // var elem = document.documentElement;
+
+    // /* Function to open fullscreen mode */
+    // function openFullscreen() {
+    //   if (elem.requestFullscreen) {
+    //     elem.requestFullscreen();
+    //   } else if (elem.mozRequestFullScreen) {
+    //     /* Firefox */
+    //     elem.mozRequestFullScreen();
+    //   } else if (elem.webkitRequestFullscreen) {
+    //     /* Chrome, Safari & Opera */
+    //     elem.webkitRequestFullscreen();
+    //   } else if (elem.msRequestFullscreen) {
+    //     /* IE/Edge */
+    //     elem = window.top.document.body; //To break out of frame in IE
+    //     elem.msRequestFullscreen();
+    //   }
+    // }
+
+    /* Function to close fullscreen mode */
+
     // console.log("matched");
   } else {
+    // function closeFullscreen() {
+    //   if (document.exitFullscreen) {
+    //     document.exitFullscreen();
+    //   } else if (document.mozCancelFullScreen) {
+    //     document.mozCancelFullScreen();
+    //   } else if (document.webkitExitFullscreen) {
+    //     document.webkitExitFullscreen();
+    //   } else if (document.msExitFullscreen) {
+    //     window.top.document.msExitFullscreen();
+    //   }
+    // }
+    // video.addEventListener("click", closeFullscreen);
     // console.log("not-matched");
   }
 }
