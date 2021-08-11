@@ -168,7 +168,7 @@
   color: #837f7f;
   z-index: 10;
 }
-@media (min-aspect-ratio: 16/9) {
+@media (orientation: landscape) {
   .multimedia .back {
     display: none;
   }
@@ -289,7 +289,7 @@
   display: flex;
   flex-direction: row;
 }
-@media (min-aspect-ratio: 16/9) {
+@media (orientation: landscape) {
   .multimedia .player .video-wrapper div .video-overlay .inner-video-overlay {
     position: fixed;
     right: 0;
@@ -322,7 +322,7 @@
   width: 50%;
   height: 100%;
 }
-@media (min-aspect-ratio: 16/9) {
+@media (orientation: landscape) {
   .multimedia .player .video-wrapper div .video-overlay {
     position: fixed;
     right: 0;
@@ -351,7 +351,7 @@
   transform: translateY(120%);
   transition: all 0.3s ease-in-out;
 }
-@media (min-aspect-ratio: 16/9) {
+@media (orientation: landscape) {
   .multimedia .player .video-wrapper div .progress-wrapper {
     position: fixed;
     bottom: 10%;
@@ -406,7 +406,7 @@
 .multimedia .player .video-wrapper div .progress-wrapper .progress::-moz-range-progress {
   background: red;
 }
-@media (min-aspect-ratio: 16/9) {
+@media (orientation: landscape) {
   .multimedia .player .video-wrapper div .progress-wrapper-active {
     opacity: 1;
   }
@@ -417,7 +417,7 @@
   position: relative;
   border-radius: 10px;
 }
-@media (min-aspect-ratio: 16/9) {
+@media (orientation: landscape) {
   .multimedia .player .video-wrapper video {
     position: fixed;
     right: 0;
@@ -436,7 +436,7 @@
   border-top: 1px solid rgba(192, 192, 192, 0.6);
   border-radius: 10px;
 }
-@media (min-aspect-ratio: 16/9) {
+@media (orientation: landscape) {
   .suggestions {
     display: none;
   }
@@ -662,7 +662,7 @@ body {
   background: black;
   color: white;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   body {
     display: block;
   }
