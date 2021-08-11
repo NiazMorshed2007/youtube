@@ -1,8 +1,8 @@
-@mixin mobile {
-  @media screen and (max-width: 1000px) {
-    @content;
-  }
-}
+// @mixin mobile {
+//   @media screen and (max-width: 1000px) {
+//     @content;
+//   }
+// }
 
 @mixin horizontal {
   @media (orientation: landscape) {
