@@ -1,5 +1,6 @@
 var playPauseBtn = document.querySelector(".play-pause-icon");
 var progress = document.querySelector(".progress");
+var juice = document.querySelector(".juice");
 var overlay = document.querySelector(".video-overlay");
 var forwardDiv = document.querySelector(".left-video-overlay");
 var rewindDiv = document.querySelector(".right-video-overlay");
@@ -11,6 +12,7 @@ video.addEventListener("click", videoOverlayOnClick);
 video.addEventListener("play", updateIcon);
 video.addEventListener("pause", updateIcon);
 video.addEventListener("timeupdate", handleProgress);
+video.addEventListener("timeupdate", handleJuice);
 progress.addEventListener("input", setInput);
 video.addEventListener("timeupdate", updateTime);
 forwardDiv.addEventListener("dblclick", rewindFunc);
@@ -49,6 +51,11 @@ function videoOverlay() {
 function updateIcon() {
   const icon = this.paused ? "play_circle_filled" : "pause_circle_filled";
   playPauseBtn.innerHTML = icon;
+}
+
+function handleJuice() {
+  const percent = (video.currentTime / video.duration) * 100;
+  juice.style.width = percent + "%";
 }
 
 function forwardFunc() {
